@@ -25,27 +25,27 @@
 
 
 // #2-16
-// enum MyType{ type1 , type2 ,type3 }
+enum MyType1 { type1 = 1 , type2 = 2 ,type3 = 3 }
 
 const person1: {
     name: string;
     age: number;
     hobbies: string[] //或是 
     role: [string,number]
-    // type: MyType
+    type: MyType1
 } = {
     name: 'archie',
     age: 26,
     hobbies: ['work out' , 'cooking'],
     role: ['string',1 ],
-    // type: MyType.type2
+    type: MyType1.type2
 }
 
 
 console.log(person1.name)
-// if (person.type === MyType.type2){
-//     alert('right type ')
-// }
+if (person.type === MyType1.type2){
+    alert('right type ')
+}
 
 for(const hobby of person1.hobbies ){
     console.log(hobby)
