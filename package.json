@@ -1,0 +1,24 @@
+{
+  "name": "typescriptutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start" : "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archiewang0/TypescriptTutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archiewang0/TypescriptTutorial/issues"
+  },
+  "homepage": "https://github.com/archiewang0/TypescriptTutorial#readme"
+}
