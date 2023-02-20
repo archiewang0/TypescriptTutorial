@@ -1,15 +1,20 @@
 "use strict";
-const button = document.querySelector('button');
-const num1 = document.querySelector('.num1');
-const num2 = document.querySelector('.num2');
+var button = document.querySelector('button');
+var num1 = document.querySelector('.num1');
+var num2 = document.querySelector('.num2');
+var abcId = 'abc';
 function addNum(num, num2) {
-    let result = num + num2;
+    var result = num + num2;
     return result;
 }
-button.addEventListener('click', () => {
-    console.log(typeof +'111/1', +'111/1');
-    console.log(addNum(+(num1.value), parseInt(num2.value)));
-});
+function clickHandler(message) {
+    console.log('Clicked! ' + message);
+}
+// button.addEventListener('click', ()=>{
+//     console.log( typeof +'111/1' ,+'111/1' )
+//     console.log(addNum( +(num1.value) , parseInt( num2.value)))
+// })
+button.addEventListener('click', clickHandler.bind(null, 'xxx'));
 // #2-11
 // function addNum(num:number, num2:number, showResult: boolean){
 //     let result =  num+ num2
@@ -127,6 +132,19 @@ button.addEventListener('click', () => {
 // if (typeof userInput ==="string"){
 //     userName = userInput
 // }
+// -----------------------------
+// ----------------------------- #2-30
+// function generateError(message:string , code:number):never {
+//     throw {message: message , errorCode: code}
+// }
+// function infiniteLoop():never {
+//     while(true){
+//         console.log('xxx')
+//     }
+// }
+// generateError('錯誤', 500)
+// const result = generateError('錯誤', 500)
+// console.log(result)
 // -----------------------------
 // ----------------------------- #2-30
 // function generateError(message:string , code:number):never {
