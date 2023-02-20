@@ -193,3 +193,19 @@ button.addEventListener('click',clickHandler.bind(null,'xxx'))
 // -----------------------------
 
 
+// ----------------------------- #2-30
+// function generateError(message:string , code:number):never {
+//     throw {message: message , errorCode: code}
+// }
+
+// function infiniteLoop():never {
+//     while(true){
+//         console.log('xxx')
+//     }
+// }
+
+// generateError('錯誤', 500)
+// const result = generateError('錯誤', 500)
+// console.log(result)
+// -----------------------------
+
