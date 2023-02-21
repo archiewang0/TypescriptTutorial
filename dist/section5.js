@@ -47,10 +47,36 @@ var AccountingDepartment = /** @class */ (function (_super) {
         if (reports === void 0) { reports = []; }
         var _this = _super.call(this, id, 'Accounting') || this;
         _this.reports = reports;
+        _this.lastReport = reports[0];
         return _this;
     }
+    Object.defineProperty(AccountingDepartment.prototype, "mostRecentReport", {
+        get: function () {
+            if (this.lastReport) {
+                return this.lastReport;
+            }
+            else {
+                throw new Error('沒有近期的報告');
+            }
+        },
+        set: function (val) {
+            if (!val) {
+                throw new Error('請輸入有效的字串');
+            }
+            this.addReport(val);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    AccountingDepartment.prototype.addEmployee = function (employee) {
+        if (employee === 'archie') {
+            return;
+        }
+        this.employess.push(employee);
+    };
     AccountingDepartment.prototype.addReport = function (report) {
         this.reports.push(report);
+        this.lastReport = report;
     };
     AccountingDepartment.prototype.showReports = function () {
         console.log(this.addReport);
@@ -59,6 +85,8 @@ var AccountingDepartment = /** @class */ (function (_super) {
 }(Department));
 var f2e = new ITDepartment('t1', ['archie']);
 var accounting = new AccountingDepartment('d1');
+accounting.mostRecentReport = 'setReport';
+console.log(accounting.mostRecentReport);
 // f2e.addEmployee('archie')
 // f2e.addEmployee('max')
 // f2e.printEmployessList()
@@ -70,5 +98,6 @@ accounting.addEmployee('archie1111');
 accounting.addEmployee('max2222');
 accounting.addReport('test2');
 accounting.addReport('test3');
+// accounting.employess = ['new']
 console.log(accounting);
 accounting.printEmployessList();
