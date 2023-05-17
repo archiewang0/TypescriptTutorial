@@ -80,3 +80,62 @@ accounting.addReport('test3')
 console.log(accounting)
 accounting.printEmployessList()
 
+// enum LiveStatus {
+//     streaming = 0,
+//     closed = 1
+// }
+
+interface a {
+    id:number
+    name: string
+    age:number
+    address:string
+    add: (data:any)=> void
+    update: (id:number)=> boolean
+    delete: (id:number)=> boolean
+}
+
+class b implements a {
+    id:number
+    name: string
+    age:number
+    address: string
+
+    constructor(name:string,age:number,address:string){
+        this.id = Math.random()
+        this.name = name
+        this.age = age
+        this.address = address
+    }
+
+    add(data:any){
+        
+    }
+    update(id:number){
+        return true
+    }
+    delete(id: number){
+        return false
+    };
+
+    // 額外新增功能
+    getDate(){
+        
+    }
+}
+
+// type A<T> = [T] extends ['bruce' | 'bruce2' | 'otherStr'] ? boolean : null
+// type T1 = A<'bruce' | 'bruce2'>
+
+// function useArr<T extends Array<T>>(a:T){
+// 	console.log(a.map) /*成功*/
+// }
+
+// useArr<string>(['string','s'])
+
+type A<T> = T extends Array<infer P> ? P : never;
+type T1 = A<[1,2]>
+
+type ParamType<T> = T extends (para: infer P) => any? P :never
+type T2 = ParamType<(a:string)=>void> 
+type T3 = ParamType<number>
