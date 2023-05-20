@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
     mode: 'development',
-    entry: './src/section1_2.ts',
+    entry: './src/app.ts',
     devServer: {
         static: [
             {directory: path.join(__dirname)},

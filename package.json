@@ -7,6 +7,7 @@
     "lite-server": "^2.6.1"
   },
   "devDependencies": {
+    "@types/node": "^20.2.0",
     "clean-webpack-plugin": "^4.0.0",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
@@ -16,7 +17,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "develop": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",

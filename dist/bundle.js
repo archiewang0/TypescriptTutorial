@@ -1,1 +1,0 @@
-(()=>{"use strict";const e=document.querySelector("button");document.querySelector(".num1"),document.querySelector(".num2"),e.addEventListener("click",function(e){console.log("Clicked! "+e)}.bind(null,"xxx"))})();
